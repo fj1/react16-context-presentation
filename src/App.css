@@ -1,0 +1,40 @@
+.page {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-gap: 1em;
+}
+
+header {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+nav {
+  grid-column: 1 / span 2;
+  justify-self: end;
+  padding-right: 40px;
+}
+
+nav button {
+  margin: 0 10px;
+}
+
+main {
+  padding: 40px;
+}
+
+article {
+  text-align: justify;
+}
+
+section {
+  padding-top: 40px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
