@@ -11,13 +11,20 @@ class LandingPage extends React.Component {
     super(props);
 
     this.state = {
-      theme: themes.blue
-    }
+      theme: themes.BLUE,
+      toggleTheme: this.toggleTheme
+    };
   }
+
+  toggleTheme = () => {
+    this.setState(state => ({
+      theme: state.theme === themes.BLUE ? themes.GREEN : themes.BLUE
+    }));
+  };
 
   render() {
     return (
-      <ThemeContext.Provider value={this.state.theme}>
+      <ThemeContext.Provider value={this.state}>
         <div className="page">
           <NavBar />
           <Header />

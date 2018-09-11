@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 
 export const themes = {
-  blue: {
-    color: 'blue'
+  BLUE: {
+    color: "blue"
   },
-  green: {
-    color: 'green'
+  GREEN: {
+    color: "green"
   }
-}
+};
 
-export const ThemeContext = React.createContext(themes.blue);
+export const ThemeContext = React.createContext({
+  theme: themes.BLUE,
+  toggleTheme: () => {}
+});

@@ -1,11 +1,17 @@
 import React from "react";
 
+import { ThemeContext } from "../themeContext";
+
 const Header = () => {
   return (
     <nav>
-      Change theme:
-      <button>Blue</button>
-      <button>Green</button>
+      <ThemeContext.Consumer>
+        {({ theme, toggleTheme }) => (
+          <button onClick={toggleTheme} style={{ color: theme.color }}>
+            Toggle Theme
+          </button>
+        )}
+      </ThemeContext.Consumer>
     </nav>
   );
 };
