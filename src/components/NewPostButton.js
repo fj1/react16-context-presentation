@@ -1,5 +1,13 @@
 import React from "react";
 
-const NewPostButton = () => <button>Create New Post</button>;
+import { ThemeContext } from "../themeContext";
+
+const NewPostButton = () => {
+  return (
+    <ThemeContext.Consumer>
+      {value => <button style={{ color: value.color }}>Create New Post</button>}
+    </ThemeContext.Consumer>
+  );
+};
 
 export default NewPostButton;

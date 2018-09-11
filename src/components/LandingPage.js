@@ -4,19 +4,30 @@ import BlogPost from "./BlogPost";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
+import { ThemeContext, themes } from "../themeContext";
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      theme: themes.blue
+    }
+  }
+
   render() {
     return (
-      <div className="page">
-        <NavBar />
-        <Header />
-        <main>
-          <BlogPost />
-          <BlogPost />
-        </main>
-        <SideBar />
-      </div>
+      <ThemeContext.Provider value={this.state.theme}>
+        <div className="page">
+          <NavBar />
+          <Header />
+          <main>
+            <BlogPost />
+            <BlogPost />
+          </main>
+          <SideBar />
+        </div>
+      </ThemeContext.Provider>
     );
   }
 }
