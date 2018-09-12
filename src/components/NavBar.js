@@ -1,13 +1,13 @@
 import React from "react";
 
-const Header = () => {
+const NavBar = props => {
   return (
     <nav>
-      Change theme:
-      <button>Blue</button>
-      <button>Green</button>
+      <button onClick={props.toggleTheme} style={{ color: props.theme.color }}>
+        Toggle Theme
+      </button>
     </nav>
   );
 };
 
-export default Header;
+export default NavBar;

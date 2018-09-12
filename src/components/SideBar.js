@@ -3,11 +3,11 @@ import React from "react";
 import LinkList from "./LinkList";
 import NewPostButton from "./NewPostButton";
 
-const SideBar = () => {
+const SideBar = props => {
   return (
     <section>
       <LinkList />
-      <NewPostButton />
+      <NewPostButton theme={props.theme} />
     </section>
   );
 };
