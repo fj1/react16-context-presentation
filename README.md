@@ -12,7 +12,7 @@ The tag `base-app` marks the original app layout.
 
 The branches demonstrate different ways to update data within the component tree.
 * The `prop-drilling` branch implements prop drilling.
-* The `master` implements React 16 Context API.
+* The `master` branch implements React 16 Context API.
 * The `redux` branch implements Redux.
 
 ## Serving
