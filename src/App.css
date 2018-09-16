@@ -4,6 +4,11 @@
   grid-gap: 1em;
 }
 
+button {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 header {
   grid-column: 1 / span 2;
   text-align: center;
