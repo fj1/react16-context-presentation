@@ -1,5 +1,10 @@
+import {connect} from 'react-redux';
 import React from "react";
 
-const NewPostButton = () => <button>Create New Post</button>;
+const NewPostButton = props => <button style={{color: props.theme.color}}>Create New Post</button>;
 
-export default NewPostButton;
+export const mapStateToProps = state => ({
+  theme: state.themeState.theme
+});
+
+export default connect(mapStateToProps)(NewPostButton);
