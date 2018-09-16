@@ -2,7 +2,7 @@ import React from "react";
 
 import { ThemeContext } from "../themeContext";
 
-const Header = () => {
+const NavBar = () => {
   return (
     <nav>
       <ThemeContext.Consumer>
@@ -16,4 +16,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavBar;
